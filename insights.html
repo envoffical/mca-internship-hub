@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placement Insights & Analytics - MCA Internship Hub</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Premium Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Loading Animation Overlay -->
+  <div id="page-loader" class="page-loader">
+    <div class="spinner-crimson" role="status"></div>
+  </div>
+
+  <!-- Shared Dynamic Header Navbar -->
+  <header id="navbar-container"></header>
+
+  <!-- Main Content Area -->
+  <main class="py-5" style="margin-top: 80px;">
+    <div class="container">
+      
+      <!-- Top Title Bar -->
+      <div class="text-center mb-5">
+        <span class="badge badge-custom badge-crimson mb-2">Data & Analytics</span>
+        <h1 class="fw-bold text-dark">Internship Insights Dashboard</h1>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+          Explore statistical trends compiled from real MCA alumni experiences. Make data-driven decisions on where to apply and what skills to practice.
+        </p>
+      </div>
+
+      <!-- Quick Metrics Counters Row -->
+      <div class="row g-3 mb-5 text-center">
+        <div class="col-md-4 col-sm-12">
+          <div class="glass-card p-3 d-flex align-items-center justify-content-center gap-3">
+            <div class="rounded-circle bg-danger-subtle p-3 text-crimson d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+              <i class="fas fa-wallet fa-lg"></i>
+            </div>
+            <div class="text-start">
+              <p class="small text-muted mb-0">Highest Stipend Recorded</p>
+              <h5 class="fw-bold text-dark mb-0" id="highest-stipend-badge">₹ 0 / Mo</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="glass-card p-3 d-flex align-items-center justify-content-center gap-3">
+            <div class="rounded-circle bg-danger-subtle p-3 text-crimson d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+              <i class="fas fa-graduation-cap fa-lg"></i>
+            </div>
+            <div class="text-start">
+              <p class="small text-muted mb-0">Direct Mentor Opt-In Rate</p>
+              <h5 class="fw-bold text-dark mb-0" id="optin-rate-badge">0%</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="glass-card p-3 d-flex align-items-center justify-content-center gap-3">
+            <div class="rounded-circle bg-danger-subtle p-3 text-crimson d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+              <i class="fas fa-award fa-lg"></i>
+            </div>
+            <div class="text-start">
+              <p class="small text-muted mb-0">Top Placement Rating</p>
+              <h5 class="fw-bold text-dark mb-0" id="average-rating-badge">4.5 / 5</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts Section Layout Grid -->
+      <div class="row g-4 mb-4">
+        <!-- 1. Most Common Skills (Horizontal Bar) -->
+        <div class="col-lg-7 col-md-12">
+          <div class="glass-card p-4 h-100">
+            <h5 class="fw-bold text-dark mb-4">
+              <i class="fas fa-tools text-crimson me-2"></i>Most Common Skills
+            </h5>
+            <div style="position: relative; height: 350px; width: 100%;">
+              <canvas id="chart-skills"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Internship Locations (Doughnut) -->
+        <div class="col-lg-5 col-md-12">
+          <div class="glass-card p-4 h-100">
+            <h5 class="fw-bold text-dark mb-4">
+              <i class="fas fa-globe-americas text-crimson me-2"></i>Internship Locations
+            </h5>
+            <div style="position: relative; height: 350px; width: 100%;">
+              <canvas id="chart-locations"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-4">
+        <!-- 3. Internship Sources (Pie) -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="glass-card p-4 h-100">
+            <h5 class="fw-bold text-dark mb-3">
+              <i class="fas fa-route text-crimson me-2"></i>Internship Sources
+            </h5>
+            <div style="position: relative; height: 280px; width: 100%;">
+              <canvas id="chart-sources"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Paid vs Unpaid Internships (Polar Area) -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="glass-card p-4 h-100">
+            <h5 class="fw-bold text-dark mb-3">
+              <i class="fas fa-coins text-crimson me-2"></i>Stipend Distribution
+            </h5>
+            <div style="position: relative; height: 280px; width: 100%;">
+              <canvas id="chart-stipends"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Placement Potential Distribution (Bar Chart) -->
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <div class="glass-card p-4 h-100">
+            <h5 class="fw-bold text-dark mb-3">
+              <i class="fas fa-chart-line text-crimson me-2"></i>PPO Conversions
+            </h5>
+            <div style="position: relative; height: 280px; width: 100%;">
+              <canvas id="chart-potential"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Shared Dynamic Footer -->
+  <footer id="footer-container"></footer>
+
+  <!-- Chart.js Engine CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Offline Database Fallback -->
+  <script src="data/internships.js"></script>
+  
+  <!-- Global Core Application Code -->
+  <script src="js/app.js"></script>
+  
+  <!-- Page Specific Analytics Script -->
+  <script src="js/insights.js"></script>
+</body>
+</html>

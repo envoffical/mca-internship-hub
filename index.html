@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCA Internship & Guidance Hub</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="A community-driven platform for MCA students to explore internship reviews, technical selection insights, and get guidance directly from alumni.">
+  <meta name="keywords"
+    content="MCA, Internship Hub, Guidance, MCA Alumni, Selection Process, Coding Internships, Tech Jobs">
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Premium Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Loading Animation Overlay -->
+  <div id="page-loader" class="page-loader">
+    <div class="spinner-crimson" role="status"></div>
+  </div>
+
+  <!-- Shared Dynamic Header Navbar -->
+  <header id="navbar-container"></header>
+
+  <!-- Main Content Area -->
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-7 text-center text-lg-start">
+            <span class="badge badge-custom badge-crimson mb-3 px-3 py-2 fs-6">
+              <i class="fas fa-users-cog me-1"></i> Department Initiative
+            </span>
+            <h1 class="hero-title mb-4">
+              Marian College MCA <span>Internship & Guidance Hub</span>
+            </h1>
+            <p class="hero-subtitle mb-5 text-muted">
+              Real internship experiences and guidance shared by Marian MCA alumni to support the next generation of
+              students.
+            </p>
+            <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
+              <a href="companies.html" class="btn btn-crimson" id="btn-hero-explore">
+                <i class="fas fa-search me-2"></i>Explore Companies
+              </a>
+              <a href="guidance.html" class="btn btn-crimson-outline" id="btn-hero-guidance">
+                <i class="fas fa-handshake me-2"></i>Find Guidance
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-5 d-none d-lg-block">
+            <!-- Glassmorphism Banner Card -->
+            <div class="glass-card p-5 border-light position-relative">
+              <div
+                class="position-absolute top-0 start-50 translate-middle bg-white p-3 rounded-circle border shadow-sm">
+                <i class="fas fa-heart text-danger fa-2x animate-bounce"></i>
+              </div>
+              <h4 class="fw-bold text-center mt-3 mb-4 text-dark">Alumni Community Network</h4>
+              <p class="text-muted text-center mb-4 small">
+                Connecting junior students with senior graduates who have successfully navigated placements at global
+                tech firms.
+              </p>
+              <div class="d-flex justify-content-around mt-4 pt-3 border-top border-light">
+                <div class="text-center">
+                  <i class="fas fa-shield-alt text-danger fs-3 mb-2"></i>
+                  <p class="small fw-semibold text-dark mb-0">100% Verified</p>
+                </div>
+                <div class="text-center">
+                  <i class="fas fa-user-lock text-danger fs-3 mb-2"></i>
+                  <p class="small fw-semibold text-dark mb-0">Privacy Safe</p>
+                </div>
+                <div class="text-center">
+                  <i class="fas fa-code text-danger fs-3 mb-2"></i>
+                  <p class="small fw-semibold text-dark mb-0">Skill Oriented</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-5 bg-white border-top border-bottom border-light">
+      <div class="container">
+        <div class="row g-4" id="stats-row">
+
+          <div class="col-md-3 col-6">
+            <div class="stat-box">
+              <div class="stat-number" id="stat-experiences">0</div>
+              <div class="stat-label">Total Reviews</div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="stat-box">
+              <div class="stat-number" id="stat-companies">0</div>
+              <div class="stat-label">Companies</div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="stat-box">
+              <div class="stat-number" id="stat-batches">0</div>
+              <div class="stat-label">MCA Batches</div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="stat-box">
+              <div class="stat-number" id="stat-guidance">0</div>
+              <div class="stat-label">Mentors Active</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Companies Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center mb-5 text-center text-md-start">
+          <div class="col-md-8">
+            <span class="badge badge-custom badge-crimson mb-2">Top Placements</span>
+            <h2 class="fw-bold text-dark">Featured Experiences</h2>
+            <p class="text-muted">A selection of premium ratings and roles from our alumni.</p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <a href="companies.html" class="btn btn-crimson-outline rounded-pill px-4">
+              View All Boards <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Grid of 6 dynamic cards -->
+        <div class="row g-4" id="featured-companies-container">
+          <!-- Dynamically filled by js/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Advice from Alumni (Wisdom Corner) -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-6">
+            <span class="badge badge-custom badge-crimson mb-2">Wisdom Corner</span>
+            <h2 class="fw-bold text-dark">Advice From Alumni</h2>
+            <p class="text-muted">Proven strategies and preparation hacks directly from former graduates.</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="glass-card p-0 shadow-lg border-0 overflow-hidden">
+              <div id="wisdomCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" id="wisdom-carousel-inner">
+                  <!-- Dynamically populated carousel slides -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#wisdomCarousel"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#wisdomCarousel"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Dynamic Footer -->
+  <footer id="footer-container"></footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Offline Database Fallback -->
+  <script src="data/internships.js"></script>
+
+  <!-- Global Core Application Code -->
+  <script src="js/app.js"></script>
+
+  <!-- Dynamic Home Dashboard Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Initialize core shell (renders navbar & footer)
+      window.MCA_HUB.initCommonUI('home');
+
+      const internships = await window.MCA_HUB.fetchInternships();
+      if (!internships || internships.length === 0) return;
+
+      // Calculate dynamic stats
+      const totalExperiences = internships.length;
+
+      const uniqueCompanies = new Set();
+      const uniqueBatches = new Set();
+      let openToGuidanceCount = 0;
+
+      internships.forEach(item => {
+        if (item.internshipCompany) uniqueCompanies.add(item.internshipCompany.trim().toUpperCase());
+        if (item.mcaBatch) uniqueBatches.add(item.mcaBatch.trim());
+        if (item.guidanceAvailability === "Yes, definitely") openToGuidanceCount++;
+      });
+
+      // Animate counter display
+      animateCounter('stat-experiences', totalExperiences);
+      animateCounter('stat-companies', uniqueCompanies.size);
+      animateCounter('stat-batches', uniqueBatches.size);
+      animateCounter('stat-guidance', openToGuidanceCount);
+
+      // Render Featured Experiences (Max 6, sorted by rating descending)
+      const featuredContainer = document.getElementById('featured-companies-container');
+      if (featuredContainer) {
+        const sortedFeatured = [...internships]
+          .sort((a, b) => b.companyRating - a.companyRating)
+          .slice(0, 6);
+
+        featuredContainer.innerHTML = sortedFeatured.map(item => `
+          <div class="col-md-4 col-sm-6">
+            <div class="glass-card p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <h5 class="fw-bold text-dark mb-0">${item.internshipCompany}</h5>
+                  <div class="rating-stars">
+                    ${window.MCA_HUB.generateStarsHTML(item.companyRating)}
+                  </div>
+                </div>
+                <p class="small text-muted mb-2"><i class="fas fa-briefcase text-crimson me-1"></i>${item.internshipRole}</p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge-custom badge-crimson"><i class="far fa-clock me-1"></i>${item.duration}</span>
+                  <span class="badge-custom badge-location"><i class="fas fa-map-marker-alt me-1"></i>${item.companyLocation}</span>
+                </div>
+                <p class="small text-medium line-clamp-3 mb-4">"${item.advice}"</p>
+              </div>
+              <a href="company.html?id=${item.id}" class="btn btn-crimson-outline w-100 rounded-pill btn-sm mt-auto">
+                <i class="fas fa-eye me-1"></i>View Details
+              </a>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Render Wisdom Corner carousel slides
+      const carouselInner = document.getElementById('wisdom-carousel-inner');
+      if (carouselInner) {
+        // Filter out experiences with non-empty advice, then take first 5
+        const adviceList = internships.filter(item => item.advice && item.advice.trim().length > 0).slice(0, 5);
+
+        carouselInner.innerHTML = adviceList.map((item, idx) => `
+          <div class="carousel-item ${idx === 0 ? 'active' : ''}" data-bs-interval="6000">
+            <div class="wisdom-card text-center p-5">
+              <p class="wisdom-text">"${item.advice}"</p>
+              <h5 class="wisdom-author mb-1">${item.name}</h5>
+              <p class="wisdom-meta mb-0">${item.internshipRole} @ ${item.internshipCompany} (Batch ${item.mcaBatch})</p>
+            </div>
+          </div>
+        `).join('');
+      }
+    });
+
+    // Helper to animate count counters from 0 to target
+    function animateCounter(id, target) {
+      const element = document.getElementById(id);
+      if (!element) return;
+
+      let current = 0;
+      const duration = 1200; // ms
+      const stepTime = Math.max(Math.floor(duration / target), 30);
+
+      const timer = setInterval(() => {
+        current += Math.ceil(target / 25);
+        if (current >= target) {
+          element.textContent = target;
+          clearInterval(timer);
+        } else {
+          element.textContent = current;
+        }
+      }, stepTime);
+    }
+  </script>
+</body>
+
+</html>

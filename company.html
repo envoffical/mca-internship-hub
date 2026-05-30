@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience Details - MCA Internship Hub</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Premium Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Loading Animation Overlay -->
+  <div id="page-loader" class="page-loader">
+    <div class="spinner-crimson" role="status"></div>
+  </div>
+
+  <!-- Shared Dynamic Header Navbar -->
+  <header id="navbar-container"></header>
+
+  <!-- Main Content Area -->
+  <main class="py-5" style="margin-top: 80px;">
+    <div class="container" id="details-view-container">
+      
+      <!-- Back Navigation Link -->
+      <div class="mb-4">
+        <a href="companies.html" class="btn btn-crimson-outline btn-sm rounded-pill px-3">
+          <i class="fas fa-arrow-left me-1"></i> Back to Review Boards
+        </a>
+      </div>
+
+      <!-- Detail Card (Filled dynamically by js/company.js) -->
+      <div id="experience-detail-content">
+        <div class="text-center py-5">
+          <div class="spinner-border text-danger" role="status">
+            <span class="visually-hidden">Loading review details...</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Shared Dynamic Footer -->
+  <footer id="footer-container"></footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Offline Database Fallback -->
+  <script src="data/internships.js"></script>
+  
+  <!-- Global Core Application Code -->
+  <script src="js/app.js"></script>
+  
+  <!-- Page Specific Execution Script -->
+  <script src="js/company.js"></script>
+</body>
+</html>
