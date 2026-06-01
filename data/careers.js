@@ -1,0 +1,552 @@
+window.CAREERS_DATA = [
+  {
+    "name": "Technopark (Phase I to IV)",
+    "type": "Integrated Government Hub",
+    "address": "Kazhakkoottam & Pallippuram",
+    "region": "Kerala",
+    "careerLink": "https://www.technopark.in/job-search",
+    "audience": "Freshers & Experienced",
+    "techStack": [
+      "AI",
+      "Blockchain",
+      "Enterprise Cloud",
+      "Full-Stack",
+      "IoT"
+    ]
+  },
+  {
+    "name": "Infopark Kochi (Phase 1 & 2)",
+    "type": "Integrated Government Hub",
+    "address": "Kakkanad",
+    "region": "Kerala",
+    "careerLink": "https://www.infopark.in/companies/job-search",
+    "audience": "Freshers & Experienced",
+    "techStack": [
+      "SaaS",
+      "Web Apps",
+      "Digital Engineering",
+      "Cloud Infrastructure"
+    ]
+  },
+  {
+    "name": "SmartCity Kochi",
+    "type": "Joint Venture Tech Hub",
+    "address": "Kakkanad (Adjacent to Infopark)",
+    "region": "Kerala",
+    "careerLink": "https://www.smartcitykochi.in",
+    "audience": "Experienced Professionals",
+    "techStack": [
+      "MNC Global Delivery Centers",
+      "Infrastructure Computing"
+    ]
+  },
+  {
+    "name": "Cyberpark Calicut",
+    "type": "Government IT Park",
+    "address": "Nellikode, Bypass Road",
+    "region": "Kerala",
+    "careerLink": "https://www.cyberparkkerala.org",
+    "audience": "Freshers & Startups",
+    "techStack": [
+      "Web Automation",
+      "Mobile Apps",
+      "Open-Source Dev",
+      "AI/ML"
+    ]
+  },
+  {
+    "name": "CareStack (GoodMethods Global)",
+    "type": "Fast-Growing SaaS Scaleup",
+    "address": "Infopark Campus, Kochi",
+    "region": "Kerala",
+    "careerLink": "https://carestack.com/careers",
+    "audience": "Freshers & Experienced",
+    "techStack": [
+      "Cloud SaaS Architecture",
+      "Angular",
+      ".NET Core",
+      "HealthTech"
+    ]
+  },
+  {
+    "name": "PixDynamics",
+    "type": "AI & Automation Startup",
+    "address": "Cyberpark, Calicut",
+    "region": "Kerala",
+    "careerLink": "https://pixdynamics.com",
+    "audience": "Freshers & Mid-Level",
+    "techStack": [
+      "Document AI",
+      "Image Processing",
+      "Python",
+      "Machine Learning"
+    ]
+  },
+  {
+    "name": "Simelabs",
+    "type": "Product Engineering Studio",
+    "address": "Infopark Campus, Kochi",
+    "region": "Kerala",
+    "careerLink": "https://simelabs.com",
+    "audience": "Freshers & Niche Exp",
+    "techStack": [
+      "AI Architecture",
+      "UI/UX Design",
+      "Cloud Engineering",
+      "Deep Tech"
+    ]
+  },
+  {
+    "name": "ValueMentors",
+    "type": "Software Development House",
+    "address": "Uralungal Cyberpark, Calicut",
+    "region": "Kerala",
+    "careerLink": "https://valuementor.com",
+    "audience": "Freshers & Experienced",
+    "techStack": [
+      "Cybersecurity Solutions",
+      "Compliance Automation",
+      "Cloud Security"
+    ]
+  },
+  {
+    "name": "Acabes International",
+    "type": "Fintech & Retail Tech Hub",
+    "address": "SmartCity, Kochi",
+    "region": "Kerala",
+    "careerLink": "https://acabes.com",
+    "audience": "Freshers & Experienced",
+    "techStack": [
+      "Digital Banking Architectures",
+      "Full-Stack Java",
+      "DevOps Pipelines"
+    ]
+  },
+  {
+    "name": "Manyata Embassy Business Park",
+    "type": "Mega Private Tech Park",
+    "address": "Outer Ring Road (ORR), Hebbal",
+    "region": "Bengaluru",
+    "careerLink": "Direct via Tenant Sites",
+    "audience": "Freshers & High-Exp",
+    "techStack": [
+      "IBM",
+      "Cognizant",
+      "Target",
+      "L&T",
+      "Rolls-Royce Tech Infrastructure"
+    ]
+  },
+  {
+    "name": "Embassy TechVillage & EcoSpace",
+    "type": "Mega Private Tech Park",
+    "address": "Marathahalli - Sarjapur Outer Ring Road",
+    "region": "Bengaluru",
+    "careerLink": "Direct via Tenant Sites",
+    "audience": "Experienced & Product Dev",
+    "techStack": [
+      "Flipkart",
+      "Cisco",
+      "Wells Fargo",
+      "Sony (GCC Product Hubs)"
+    ]
+  },
+  {
+    "name": "International Tech Park (ITPB)",
+    "type": "Premium Managed Tech Park",
+    "address": "Whitefield",
+    "region": "Bengaluru",
+    "careerLink": "Direct via Tenant Sites",
+    "audience": "Freshers & Experienced",
+    "techStack": [
+      "Oracle",
+      "TCS",
+      "GE",
+      "Applied Research & Analytics Hubs"
+    ]
+  },
+  {
+    "name": "Electronics City (Phase 1 & 2)",
+    "type": "Industrial & Tech Township",
+    "address": "Hosur Road, South Bengaluru",
+    "region": "Bengaluru",
+    "careerLink": "Direct via Tenant Sites",
+    "audience": "Mass Freshers & Lateral",
+    "techStack": [
+      "Infosys HQ",
+      "Wipro HQ",
+      "HCLTech",
+      "Tech Mahindra Operations"
+    ]
+  },
+  {
+    "name": "Bagmane Constellation Park",
+    "type": "Premium Private Tech Park",
+    "address": "Marathahalli Outer Ring Road",
+    "region": "Bengaluru",
+    "careerLink": "Direct via Tenant Sites",
+    "audience": "Product Engineers & R&D",
+    "techStack": [
+      "Google",
+      "Amazon",
+      "Dell",
+      "Boeing Core Software Engineering"
+    ]
+  },
+  {
+    "name": "Razorpay",
+    "type": "Fintech Unicorn Startup",
+    "address": "SJR Cyber, Koramangala",
+    "region": "Bengaluru",
+    "careerLink": "https://razorpay.com/jobs",
+    "audience": "Freshers & Experienced",
+    "techStack": [
+      "Payment Gateways",
+      "Python",
+      "Go",
+      "React",
+      "Distributed Systems"
+    ]
+  },
+  {
+    "name": "Cred",
+    "type": "High-Growth Tech Scaleup",
+    "address": "Indiranagar",
+    "region": "Bengaluru",
+    "careerLink": "https://careers.cred.club",
+    "audience": "Experienced Engineering",
+    "techStack": [
+      "High-Scale Backend",
+      "Microservices",
+      "Go",
+      "Java",
+      "Mobile Engineering"
+    ]
+  },
+  {
+    "name": "PhonePe",
+    "type": "Fintech & Digital Payments Giant",
+    "address": "Kadubeesanahalli, Outer Ring Road",
+    "region": "Bengaluru",
+    "careerLink": "https://www.phonepe.com/careers",
+    "audience": "Freshers & Experienced",
+    "techStack": [
+      "Big Data",
+      "High-Concurrency Systems",
+      "Java",
+      "Android/iOS Dev"
+    ]
+  },
+  {
+    "name": "Groww",
+    "type": "Fintech Investment Scaleup",
+    "address": "Vaishnavi Tech Park, ORR",
+    "region": "Bengaluru",
+    "careerLink": "https://groww.in/careers",
+    "audience": "Freshers & Experienced",
+    "techStack": [
+      "Financial Engineering",
+      "Python",
+      "React Native",
+      "Cloud Native Tech"
+    ]
+  },
+  {
+    "name": "Thoughtworks",
+    "type": "Premium Technology Consultant",
+    "address": "Koramangala Tech Hub",
+    "region": "Bengaluru",
+    "careerLink": "https://www.thoughtworks.com/careers",
+    "audience": "Experienced Developers",
+    "techStack": [
+      "Agile Consulting",
+      "Clean Code Architectures",
+      "Full-Stack Dev"
+    ]
+  },
+  {
+    "name": "DLF Cybercity Chennai",
+    "type": "Massive Private SEZ Park",
+    "address": "Ramapuram, Mount Poonamallee Road",
+    "region": "Chennai",
+    "careerLink": "Direct via Tenant Sites",
+    "audience": "Freshers & Experienced",
+    "techStack": [
+      "Barclays",
+      "EY",
+      "IBM",
+      "Cognizant Operations (Fintech/Service)"
+    ]
+  },
+  {
+    "name": "Tidel Park",
+    "type": "Foundational Government Park",
+    "address": "Taramani, OMR Corridor",
+    "region": "Chennai",
+    "careerLink": "Direct via Tenant Sites",
+    "audience": "Freshers & Experienced",
+    "techStack": [
+      "Service Delivery Systems",
+      "Financial Technology Core Units"
+    ]
+  },
+  {
+    "name": "SIPCOT IT Park",
+    "type": "Massive Tech Township",
+    "address": "Siruseri, OMR Corridor",
+    "region": "Chennai",
+    "careerLink": "Direct via Tenant Sites",
+    "audience": "Mass Freshers & Lateral",
+    "techStack": [
+      "TCS Corporate Butterfly Campus",
+      "CTS",
+      "Hexaware Centers"
+    ]
+  },
+  {
+    "name": "Ramanujan IT City",
+    "type": "Premium Private Tech Park",
+    "address": "Taramani, OMR",
+    "region": "Chennai",
+    "careerLink": "Direct via Tenant Sites",
+    "audience": "Product & FinTech Engineers",
+    "techStack": [
+      "Amazon",
+      "Cisco",
+      "Philips Software",
+      "FinTech Product Delivery"
+    ]
+  },
+  {
+    "name": "Zoho Corporation",
+    "type": "Global SaaS Leader",
+    "address": "Estancia IT Park Outskirts",
+    "region": "Chennai",
+    "careerLink": "https://www.zoho.com/careers",
+    "audience": "Skill-Based Freshers & Exp",
+    "techStack": [
+      "Core SaaS Products",
+      "Java",
+      "Cloud Infrastructure",
+      "Database Engines"
+    ]
+  },
+  {
+    "name": "Freshworks",
+    "type": "SaaS Unicorn Giant",
+    "address": "Perungudi, OMR Corridor",
+    "region": "Chennai",
+    "careerLink": "https://www.freshworks.com/careers",
+    "audience": "Freshers & Experienced",
+    "techStack": [
+      "Ruby on Rails",
+      "Python",
+      "AWS",
+      "Customer Engagement Software"
+    ]
+  },
+  {
+    "name": "Chargebee",
+    "type": "Subscription Management SaaS",
+    "address": "DLF Cybercity, Ramapuram",
+    "region": "Chennai",
+    "careerLink": "https://www.chargebee.com/careers",
+    "audience": "Experienced Engineering",
+    "techStack": [
+      "Billing Engines",
+      "Java",
+      "Node.js",
+      "SaaS Financial Workflows"
+    ]
+  },
+  {
+    "name": "Kissflow",
+    "type": "No-Code Enterprise Startup",
+    "address": "World Trade Center, Perungudi",
+    "region": "Chennai",
+    "careerLink": "https://kissflow.com/careers",
+    "audience": "Freshers & Mid-Level",
+    "techStack": [
+      "Cloud Orchestration",
+      "Visual Builders",
+      "Java",
+      "React",
+      "Python"
+    ]
+  },
+  {
+    "name": "Intellect Design Arena",
+    "type": "Core Banking Fintech Giant",
+    "address": "SIPCOT IT Park, Siruseri",
+    "region": "Chennai",
+    "careerLink": "https://www.intellectdesign.com/careers",
+    "audience": "Freshers & Experienced",
+    "techStack": [
+      "Fintech Platforms",
+      "Microservices",
+      "Cloud Native Banking Engines"
+    ]
+  },
+  {
+    "name": "Rajiv Gandhi Infotech Park",
+    "type": "Mega Government IT Park",
+    "address": "Hinjawadi Phase 1, 2 & 3",
+    "region": "Pune",
+    "careerLink": "Direct via Tenant Sites",
+    "audience": "Freshers & Experienced",
+    "techStack": [
+      "Infosys",
+      "Wipro",
+      "TCS",
+      "Tech Mahindra",
+      "Dassault Systèmes"
+    ]
+  },
+  {
+    "name": "Magarpatta Cybercity",
+    "type": "Integrated Township Tech Hub",
+    "address": "Hadapsar, Eastern Pune",
+    "region": "Pune",
+    "careerLink": "Direct via Tenant Sites",
+    "audience": "Product Specialists",
+    "techStack": [
+      "Amdocs",
+      "Red Hat (Linux Core)",
+      "BNY Mellon Enterprise Tech"
+    ]
+  },
+  {
+    "name": "EON Free Zone (Phase 1 & 2)",
+    "type": "Premium Modern SEZ Park",
+    "address": "Kharadi Tech Corridor",
+    "region": "Pune",
+    "careerLink": "Direct via Tenant Sites",
+    "audience": "Fintech & Enterprise Exp",
+    "techStack": [
+      "Credit Suisse",
+      "Symantec Security",
+      "Virtusa Digital Dev"
+    ]
+  },
+  {
+    "name": "KPIT Technologies",
+    "type": "Automotive Software Leader",
+    "address": "Hinjawadi Phase 3",
+    "region": "Pune",
+    "careerLink": "https://www.kpit.com/careers-overview",
+    "audience": "Freshers & Niche Core Exp",
+    "techStack": [
+      "Automotive Software",
+      "Autonomous Driving",
+      "Embedded C++",
+      "Python"
+    ]
+  },
+  {
+    "name": "Druva",
+    "type": "Cloud Data Protection Unicorn",
+    "address": "Yerwada",
+    "region": "Pune",
+    "careerLink": "https://www.druva.com/careers",
+    "audience": "Experienced Engineering",
+    "techStack": [
+      "SaaS Data Backup",
+      "AWS Native Architectures",
+      "Go",
+      "Python",
+      "Core C++"
+    ]
+  },
+  {
+    "name": "Mindspace IT Park",
+    "type": "Massive Private Enterprise Park",
+    "address": "Airoli (Navi Mumbai) & Malad",
+    "region": "Mumbai",
+    "careerLink": "Direct via Tenant Sites",
+    "audience": "Freshers & Experienced",
+    "techStack": [
+      "Banking Captive Hubs",
+      "Large Scale Engineering Services"
+    ]
+  },
+  {
+    "name": "Nesco IT Park",
+    "type": "Premium Corporate Tech Park",
+    "address": "Goregaon East, Western Express Hwy",
+    "region": "Mumbai",
+    "careerLink": "Direct via Tenant Sites",
+    "audience": "Consulting & Corporate Tech",
+    "techStack": [
+      "Global Management Consultancies",
+      "Core Banking Integrations"
+    ]
+  },
+  {
+    "name": "Millennium Business Park (MBP)",
+    "type": "Government Industrial Hub",
+    "address": "Mahape, Navi Mumbai",
+    "region": "Mumbai",
+    "careerLink": "Direct via Tenant Sites",
+    "audience": "Freshers & Mid-Market",
+    "techStack": [
+      "Mid-Sized Software Houses",
+      "Web Automation",
+      "BPO/KPO Engines"
+    ]
+  },
+  {
+    "name": "Hiranandani Business Park",
+    "type": "Startup & Tech Hub Corridor",
+    "address": "Powai",
+    "region": "Mumbai",
+    "careerLink": "Direct via Tenant Sites",
+    "audience": "Product Engineering & AI",
+    "techStack": [
+      "Top-Tier Scaleups",
+      "Specialized Data Analytics",
+      "Fintech Teams"
+    ]
+  },
+  {
+    "name": "Jio Platforms",
+    "type": "Digital & Telecom Tech Giant",
+    "address": "Reliance Corporate Park, Ghansoli",
+    "region": "Mumbai",
+    "careerLink": "https://careers.jio.com",
+    "audience": "Mass Freshers & Lateral",
+    "techStack": [
+      "5G R&D",
+      "Cloud Platforms",
+      "Automation Systems",
+      "Full-Stack Python/Java"
+    ]
+  },
+  {
+    "name": "InVideo",
+    "type": "Video Automation SaaS Startup",
+    "address": "Andheri East",
+    "region": "Mumbai",
+    "careerLink": "https://invideo.io/careers",
+    "audience": "Freshers & Experienced",
+    "techStack": [
+      "AI Video Processing",
+      "Web Assembly",
+      "Next.js",
+      "WebGL Engineering"
+    ]
+  },
+  {
+    "name": "Quantiphi",
+    "type": "AI & Deep Learning Scaleup",
+    "address": "Nesco IT Park, Goregaon",
+    "region": "Mumbai",
+    "careerLink": "https://www.quantiphi.com/careers",
+    "audience": "Freshers & Experienced",
+    "techStack": [
+      "Advanced Data Analytics",
+      "Machine Learning Pipelines",
+      "AWS/GCP",
+      "Python"
+    ]
+  }
+];

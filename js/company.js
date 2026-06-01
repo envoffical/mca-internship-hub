@@ -117,6 +117,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     `;
   }
 
+  const companyContactsHTML = formatCompanyContactDetails(record.companyContactDetails);
+
   contentContainer.innerHTML = `
     <!-- Top Showcase Header -->
     <div class="details-header px-4 px-md-5 text-center text-md-start">
@@ -220,6 +222,9 @@ document.addEventListener('DOMContentLoaded', async () => {
           </div>
         </div>
 
+        <!-- Company Contact Details Deck -->
+        ${companyContactsHTML}
+
         <!-- Mentorship Connect Deck -->
         ${contactCardHTML}
 
@@ -227,3 +232,103 @@ document.addEventListener('DOMContentLoaded', async () => {
     </div>
   `;
 });
+
+/**
+ * Format and parse company contact details (Phone, Email, Website)
+ * into a beautiful, premium, interactive HTML card.
+ * @param {string} contactStr 
+ * @returns {string} HTML string
+ */
+function formatCompanyContactDetails(contactStr) {
+  if (!contactStr || contactStr.trim().toLowerCase() === 'n/a' || contactStr.trim() === '') {
+    return `
+      <div class="solid-card p-4 mt-4">
+        <h5 class="details-section-title">
+          <i class="fas fa-address-book"></i>Company Contacts
+        </h5>
+        <div class="text-center py-3">
+          <i class="fas fa-info-circle text-muted mb-2 fs-4"></i>
+          <p class="small text-muted mb-0">No direct contact details provided for this company.</p>
+        </div>
+      </div>
+    `;
+  }
+
+  // Parse segments/lines
+  const lines = contactStr.split(/\r?\n/).map(l => l.trim()).filter(l => l.length > 0);
+  let contactItemsHTML = '';
+  
+  lines.forEach(line => {
+    // 1. Check for URL
+    const urlMatch = line.match(/(https?:\/\/[^\s]+)/i);
+    // 2. Check for Email
+    const emailMatch = line.match(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/);
+    
+    if (urlMatch) {
+      const url = urlMatch[1];
+      const displayUrl = url.replace(/^https?:\/\/(www\.)?/, '');
+      const label = line.replace(url, '').replace(/[:\s-]+$/, '').trim();
+      const displayText = label ? `${label}: ${displayUrl}` : displayUrl;
+      contactItemsHTML += `
+        <div class="d-flex align-items-start mb-3">
+          <div class="text-crimson mt-1 me-3"><i class="fas fa-globe fs-5"></i></div>
+          <div class="text-break">
+            <span class="small text-muted d-block">Website</span>
+            <a href="${url}" target="_blank" class="text-crimson fw-semibold text-decoration-none">${displayText}</a>
+          </div>
+        </div>
+      `;
+    } else if (emailMatch) {
+      const email = emailMatch[1];
+      const label = line.replace(email, '').replace(/[:\s-]+$/, '').trim();
+      const displayText = label ? `${label}: ${email}` : email;
+      contactItemsHTML += `
+        <div class="d-flex align-items-start mb-3">
+          <div class="text-crimson mt-1 me-3"><i class="fas fa-envelope fs-5"></i></div>
+          <div class="text-break">
+            <span class="small text-muted d-block">Email</span>
+            <a href="mailto:${email}" class="text-crimson fw-semibold text-decoration-none">${displayText}</a>
+          </div>
+        </div>
+      `;
+    } else {
+      // Check if it looks like a phone number
+      const cleanPhone = line.replace(/[^\d+]/g, '');
+      const hasMinDigits = cleanPhone.replace(/[+]/g, '').length >= 7;
+      
+      if (hasMinDigits) {
+        contactItemsHTML += `
+          <div class="d-flex align-items-start mb-3">
+            <div class="text-crimson mt-1 me-3"><i class="fas fa-phone-alt fs-5"></i></div>
+            <div class="text-break">
+              <span class="small text-muted d-block">Phone / Contact</span>
+              <a href="tel:${cleanPhone}" class="text-crimson fw-semibold text-decoration-none">${line}</a>
+            </div>
+          </div>
+        `;
+      } else {
+        // General text
+        contactItemsHTML += `
+          <div class="d-flex align-items-start mb-3">
+            <div class="text-crimson mt-1 me-3"><i class="fas fa-info-circle fs-5"></i></div>
+            <div class="text-break">
+              <span class="small text-muted d-block">Details</span>
+              <span class="text-medium fw-semibold">${line}</span>
+            </div>
+          </div>
+        `;
+      }
+    }
+  });
+
+  return `
+    <div class="solid-card p-4 mt-4">
+      <h5 class="details-section-title">
+        <i class="fas fa-address-book"></i>Company Contacts
+      </h5>
+      <div class="mt-3">
+        ${contactItemsHTML}
+      </div>
+    </div>
+  `;
+}

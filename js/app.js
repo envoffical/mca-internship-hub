@@ -72,6 +72,11 @@ window.MCA_HUB = {
       const selectionProcess = item["Describe the selection process briefly.\r\n(Interview, coding test, tasks, etc.)"] || 
                                item["Describe the selection process briefly.\n(Interview, coding test, tasks, etc.)"] || "Not detailed.";
 
+      // Extract company contact details safely
+      const rawContact = item["Company Contact Details (Phone, Email, Website) "] || 
+                         item["Company Contact Details (Phone, Email, Website)"] || "N/A";
+      const companyContactDetails = typeof rawContact === "string" ? rawContact.trim() : "N/A";
+
       return {
         id: index + 1,
         name: item["Name"] ? item["Name"].trim() : "Alumni Mentor",
@@ -89,6 +94,7 @@ window.MCA_HUB = {
         placementPotential: item["How likely is this internship to lead to placement opportunities?  "] ? item["How likely is this internship to lead to placement opportunities?  "].trim() : "Moderate",
         guidanceAvailability: guidanceAvailability,
         companyRating: companyRating,
+        companyContactDetails: companyContactDetails,
         advice: item["Any advice or mistakes juniors should keep in mind while preparing for internships? "] ? 
                 item["Any advice or mistakes juniors should keep in mind while preparing for internships? "].trim() : 
                 "Focus on sharpening your tech skills, keep communication clear, and start applying early!"
@@ -178,6 +184,11 @@ window.MCA_HUB = {
                 </a>
               </li>
               <li class="nav-item">
+                <a class="nav-link ${activePage === 'careers' ? 'active' : ''}" href="careers.html">
+                  <i class="fas fa-briefcase me-1 d-lg-none"></i>Careers
+                </a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link ${activePage === 'skills' ? 'active' : ''}" href="skills.html">
                   <i class="fas fa-laptop-code me-1 d-lg-none"></i>Skills
                 </a>
@@ -221,6 +232,7 @@ window.MCA_HUB = {
               <ul class="list-inline text-center text-md-end mb-0">
                 <li class="list-inline-item mx-2"><a href="index.html" class="small text-muted">Home</a></li>
                 <li class="list-inline-item mx-2"><a href="companies.html" class="small text-muted">Companies</a></li>
+                <li class="list-inline-item mx-2"><a href="careers.html" class="small text-muted">Careers</a></li>
                 <li class="list-inline-item mx-2"><a href="skills.html" class="small text-muted">Skills</a></li>
                 <li class="list-inline-item mx-2"><a href="guidance.html" class="small text-muted">Guidance</a></li>
                 <li class="list-inline-item mx-2"><a href="insights.html" class="small text-muted">Insights</a></li>
